@@ -5,58 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моє хобі - життя</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #333; color: white; padding: 15px; text-align: center; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline; margin: 10px; }
-        nav ul li a { color: white; text-decoration: none; }
-        .container { padding: 20px; }
-        .content { display: none; }
-        .active { display: block; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 15px 0;
+        }
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px gray;
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Моє хобі - життя</h1>
         <nav>
-            <ul>
-                <li><a href="#" onclick="showPage('home')">Головна</a></li>
-                <li><a href="#" onclick="showPage('hobby')">Мої хобі</a></li>
-                <li><a href="#" onclick="showPage('achievements')">Досягнення</a></li>
-                <li><a href="#" onclick="showPage('blog')">Блог</a></li>
-                <li><a href="#" onclick="showPage('contacts')">Контакти</a></li>
-            </ul>
+            <a href="#hobby">Про хобі</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#video">Відео</a>
+            <a href="#links">Корисні посилання</a>
         </nav>
     </header>
-    
-    <div class="container">
-        <div id="home" class="content active">
-            <h2>Ласкаво просимо!</h2>
-            <p>Цей сайт присвячений моїм улюбленим хобі та досягненням.</p>
-        </div>
-        <div id="hobby" class="content">
-            <h2>Мої хобі</h2>
-            <p>Я захоплююся спортом, творчістю та подорожами.</p>
-        </div>
-        <div id="achievements" class="content">
-            <h2>Досягнення</h2>
-            <p>Ось деякі мої досягнення у сфері спорту та творчості.</p>
-        </div>
-        <div id="blog" class="content">
-            <h2>Блог</h2>
-            <p>Тут я ділюся своїм досвідом та порадами.</p>
-        </div>
-        <div id="contacts" class="content">
-            <h2>Контакти</h2>
-            <p>Зв'яжіться зі мною через соцмережі або e-mail.</p>
-        </div>
-    </div>
 
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.content').forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
+    <section id="hobby">
+        <h2>Про моє хобі</h2>
+        <p>Тут буде текст про твоє хобі. Опиши, що тебе надихає і чому це важливо.</p>
+        <img src="hobby.jpg" alt="Моє хобі">
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <p>Фото, які демонструють моє хобі.</p>
+        <img src="photo1.jpg" alt="Фото 1">
+        <img src="photo2.jpg" alt="Фото 2">
+    </section>
+
+    <section id="video">
+        <h2>Відео про моє хобі</h2>
+        <p>Декілька відео про моє улюблене заняття.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="links">
+        <h2>Корисні посилання</h2>
+        <p>Тут будуть цікаві посилання на ресурси про моє хобі:</p>
+        <ul>
+            <li><a href="https://example.com" target="_blank">Цікавий сайт про хобі</a></li>
+            <li><a href="https://example2.com" target="_blank">Ще один ресурс</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Моє хобі - життя</p>
+    </footer>
 </body>
 </html>
